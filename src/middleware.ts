@@ -1,5 +1,5 @@
-import createMiddleware from 'next-intl/middleware'
 import { i18n } from '@/config/i18n'
+import createMiddleware from 'next-intl/middleware'
 
 const nextIntlMiddleware = createMiddleware({
   locales: i18n.locales,

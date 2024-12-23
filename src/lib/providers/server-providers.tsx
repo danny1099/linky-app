@@ -1,7 +1,7 @@
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 
 /* prettier-ignore */
-export const NextIntlProvider = ({ children }: Children) => {
+export const ServerProviders = ({ children }: Children) => {
   const messages = useMessages()
 
   return (

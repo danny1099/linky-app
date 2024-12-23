@@ -4,9 +4,9 @@ import { i18n, type Locale } from './locales'
 
 export default getRequestConfig(async ({ requestLocale }) => {
   const locale = (await requestLocale) as Locale
-  if (!i18n.locales.includes(locale)) notFound()
+  if (!locale || !i18n.locales.includes(locale)) notFound()
 
   return {
-    messages: (await import(`@/config/i18n/langs/${locale}.json`)).default,
+    messages: (await import(`@/config/i18n/langs/${locale}.json`)).default
   }
 })
