@@ -1,0 +1,15 @@
+{
+  "intro": {
+    "welcome": "Welcome to Linky!"
+  },
+  "lang": {
+    "en": {
+      "locale": "en",
+      "description": "Translate to english language (US)"
+    },
+    "es": {
+      "locale": "es",
+      "description": "Translate to spanish language (ES)"
+    }
+  }
+}
