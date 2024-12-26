@@ -26,6 +26,17 @@ export const metadata: Metadata = {
   description:
     'Linky is a simple and easy to use url shortener platform that allows you to shorten your long urls.',
   icons: {
-    icon: '/images/img-logo-linky.svg'
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/images/img-linky-l.svg',
+        href: '/images/img-linky-l.svg'
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/images/img-linky-d.svg',
+        href: '/images/img-linky-d.svg'
+      }
+    ]
   }
 }

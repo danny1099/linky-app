@@ -11,5 +11,16 @@
       "locale": "es",
       "description": "Traducir al idioma español (ES)"
     }
+  },
+  "topbar": {
+    "login": "Iniciar Sesión",
+    "get-started": "Comenzar",
+    "go-to": "Ir al dashboard"
+  },
+  "home": {
+    "title": "El acortador de URL para enlaces de alto rendimiento.",
+    "description": "Linky es una plataforma de acortador de URL simple y fácil de usar que te permite acortar tus URLs largas.",
+    "input-placeholder": "Http://tu url larga va aqui...",
+    "button-text": "Acortar"
   }
 }

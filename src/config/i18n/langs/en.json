@@ -11,5 +11,16 @@
       "locale": "es",
       "description": "Translate to spanish language (ES)"
     }
+  },
+  "topbar": {
+    "login": "Sign In",
+    "get-started": "Get Started",
+    "go-to": "Go to dashboard"
+  },
+  "home": {
+    "title": "The URL Shortener for high-performing links.",
+    "description": "Linky is a simple and easy to use url shortener platform that allows you to shorten your long urls.",
+    "input-placeholder": "Http://your long url go here...",
+    "button-text": "Shorten"
   }
 }
