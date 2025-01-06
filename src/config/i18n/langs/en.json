@@ -20,7 +20,55 @@
   "home": {
     "title": "The URL Shortener for high-performing links.",
     "description": "Linky is a simple and easy to use url shortener platform that allows you to shorten your long urls.",
-    "input-placeholder": "Http://your long url go here...",
+    "input-placeholder": "Put your long url go here...",
     "button-text": "Shorten"
+  },
+  "menu": {
+    "title": "Menu",
+    "items": {
+      "dashboard": "Dashboard",
+      "link": "Links",
+      "qr": "Qr Codes"
+    }
+  },
+  "links": {
+    "title": "Links",
+    "description": "In this section you can see all your links created",
+    "new-link": "New Link",
+    "search": "Type something to search...",
+    "empty": {
+      "title": "There isn't much content here yet",
+      "description": "Why don't you add some links?"
+    },
+    "new_link": {
+      "title": "New Link",
+      "description": "In this section you can create a new link"
+    },
+    "form": {
+      "submit": "Create Link",
+      "cancel": "Cancel",
+      "title": {
+        "label": "Title",
+        "placeholder": "Define a title for your link",
+        "error": "Title is required."
+      },
+      "longUrl": {
+        "label": "Destination",
+        "placeholder": "Enter yor long url here",
+        "error": "Please enter a valid URL"
+      },
+      "slug": {
+        "label": "Custom Link (Optional)",
+        "placeholder": "Define a custom name for your link"
+      },
+      "temporal": {
+        "label": "This link will be valid for 7 days",
+        "placeholder": ""
+      },
+      "qr": {
+        "label": "Generate a QR Code for your link",
+        "placeholder": ""
+      }
+    }
   }
 }

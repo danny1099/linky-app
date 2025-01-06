@@ -45,7 +45,7 @@ export const LangToggle = () => {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild className="size-5 max-sm:hidden">
+      <DropdownMenuTrigger asChild className="size-5">
         <Button variant="ghost" size="icon">
           <Icon name="translate" className="size-4" />
         </Button>
@@ -59,10 +59,7 @@ export const LangToggle = () => {
                 key={lang.locale}
                 value={lang.locale}
                 iconName="check2"
-                className={cn(
-                  'text-tertiary focus:bg-background focus:text-foreground',
-                  lang.locale === locale && 'bg-accent text-foreground'
-                )}
+                iconClassName="text-violet-600"
               >
                 <div className="flex flex-row items-center gap-x-2 text-xs">
                   <img

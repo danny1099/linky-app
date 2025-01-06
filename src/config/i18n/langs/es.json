@@ -19,8 +19,57 @@
   },
   "home": {
     "title": "El acortador de URL para enlaces de alto rendimiento.",
-    "description": "Linky es una plataforma de acortador de URL simple y fácil de usar que te permite acortar tus URLs largas.",
-    "input-placeholder": "Http://tu url larga va aqui...",
+    "description": "Linky es un acortador de URL simple y fácil de usar que te permite acortar tus URLs largas.",
+    "input-placeholder": "Introduce tu url larga va aqui...",
     "button-text": "Acortar"
+  },
+  "menu": {
+    "title": "Menu",
+    "items": {
+      "dashboard": "Dashboard",
+      "link": "Links",
+      "qr": "Códigos QR"
+    }
+  },
+  "links": {
+    "title": "Links",
+    "description": "En esta sección puedes ver todos tus enlaces creados",
+    "new-link": "Crear Link",
+    "no-links": "No tienes enlaces todavía",
+    "search": "Escribre algo para buscar...",
+    "empty": {
+      "title": "Aquí no hay mucho contenido aún",
+      "description": "Por que no agregas algún link?."
+    },
+    "new_link": {
+      "title": "Crear Link",
+      "description": "Agrega un nuevo link"
+    },
+    "form": {
+      "submit": "Crear Link",
+      "cancel": "Cancelar",
+      "title": {
+        "label": "Titulo",
+        "placeholder": "Define un titulo para tu link",
+        "error": "El titulo es requerido."
+      },
+      "longUrl": {
+        "label": "Destino",
+        "placeholder": "Ingresa tu url larga aqui",
+        "error": "Por favor ingresa una url valida"
+      },
+      "slug": {
+        "label": "Link personalizado (Opcional)",
+        "placeholder": "Define un link personalizado para tu link"
+      },
+      "temporal": {
+        "label": "Link temporal (Disponible por 7 días)",
+        "placeholder": ""
+      },
+      "qr": {
+        "label": "Genera un codigo QR para tu link",
+        "placeholder": ""
+      }
+    }
   }
 }
