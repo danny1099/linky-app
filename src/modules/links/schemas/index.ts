@@ -1,1 +1,1 @@
-export * from './new-link'
+export * from './schema-link'

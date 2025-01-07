@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
-import { Button, Heading, Input, Text } from '@/modules/common/components'
+import { Heading, Text } from '@/modules/common/components'
+import { ShortenInput } from '@/modules/home/components'
 
 export default async function Home() {
   const t = await getTranslations('home')
@@ -11,17 +12,9 @@ export default async function Home() {
           <Heading type="h1" className="text-balance text-2xl font-bold md:text-4xl">
             {t('title')}
           </Heading>
-          <Text className="line-clamp-2 w-5/6 text-pretty text-[.72rem] md:w-1/2 md:text-sm">
-            {t('description')}
-          </Text>
+          <Text className="line-clamp-2 w-5/6 text-pretty text-[.72rem] md:w-1/2 md:text-sm">{t('description')}</Text>
         </div>
-
-        <div className="mt-10 flex w-full flex-row items-center justify-center gap-2 p-2 md:w-1/2">
-          <Input type="text" placeholder={t('input-placeholder')} className="bg-accent max-sm:w-full" />
-          <Button icon="send" className="w-fit">
-            <span className="max-sm:hidden">{t('button-text')}</span>
-          </Button>
-        </div>
+        <ShortenInput />
       </article>
     </section>
   )

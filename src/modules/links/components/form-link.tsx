@@ -1,33 +1,53 @@
 'use client'
 import { z } from 'zod'
+import { toast } from 'sonner'
 import { useForm } from 'react-hook-form'
+import { useTranslations } from 'next-intl'
+import { useSearchParams } from 'next/navigation'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Form, FormControl, FormField, FormItem, FormLabel, Input } from '@/modules/common/components'
-import { CustomLink, OptionsLink, FormActions } from '@/modules/links/components'
+import { CustomLink, FormActions, OptionsLink } from '@/modules/links/components'
 import { linkFormSchema, NewLink } from '@/modules/links/schemas'
-import { fieldsFormLink } from '@/modules/links/utils'
+import { fieldsFormLink, shortenUrl } from '@/modules/links/utils'
 import { api } from '@/server/client'
 
 export const FormLink = () => {
+  const t = useTranslations('links.form')
+  const params = useSearchParams()
   const createLink = api.link.newLink.useMutation()
   const form = useForm<z.infer<typeof linkFormSchema>>({
     resolver: zodResolver(linkFormSchema),
     defaultValues: {
       title: '',
-      longUrl: '',
+      longUrl: params.get('sh') || '',
       slug: '',
       temporal: false,
+      shortUrl: '',
       qr: false
     }
   })
 
-  const onSubmit = (data: z.infer<typeof linkFormSchema>) => {
-    createLink.mutate(data, {
-      onSuccess: (r) => {
-        console.log(r)
-        form.reset()
+  const onSubmit = async (data: z.infer<typeof linkFormSchema>) => {
+    createLink.mutate(
+      {
+        title: data.title,
+        longUrl: data.longUrl,
+        slug: data.slug,
+        shortUrl: shortenUrl(),
+        temporal: data.temporal,
+        qr: data.qr
+      },
+      {
+        onSuccess: () => {
+          toast.success(t('success'))
+          form.reset()
+        },
+        onError: (error) => {
+          console.log({ error: error.message, data })
+          toast.error(error.message.includes('Slug') ? t('slug-error') : t('error'))
+        }
       }
-    })
+    )
   }
 
   return (
@@ -59,8 +79,6 @@ export const FormLink = () => {
                   )}
                 />
               ))}
-
-            {/* fields custom */}
             <CustomLink form={form} />
             <OptionsLink form={form} />
           </div>

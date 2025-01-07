@@ -31,6 +31,9 @@
       "qr": "Códigos QR"
     }
   },
+  "redirect": {
+    "title": "Te redirigiremos en unos segundos..."
+  },
   "links": {
     "title": "Links",
     "description": "En esta sección puedes ver todos tus enlaces creados",
@@ -48,6 +51,11 @@
     "form": {
       "submit": "Crear Link",
       "cancel": "Cancelar",
+      "success": "Link creado correctamente",
+      "updated": "Link actualizado correctamente",
+      "deleted": "Link eliminado correctamente",
+      "error": "Hubo un error creando el link",
+      "slug-error": "El Link personalizado ya existe, prueba con otro",
       "title": {
         "label": "Titulo",
         "placeholder": "Define un titulo para tu link",
@@ -60,7 +68,8 @@
       },
       "slug": {
         "label": "Link personalizado (Opcional)",
-        "placeholder": "Define un link personalizado para tu link"
+        "placeholder": "Define un link personalizado para tu link",
+        "error": "El link personalizado debe tener entre 2 y 6 caracteres"
       },
       "temporal": {
         "label": "Link temporal (Disponible por 7 días)",

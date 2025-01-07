@@ -25,9 +25,17 @@ export const CustomLink = ({ form, className }: Props) => {
                   Linky.com
                 </span>{' '}
                 /
-                <Input type="text" isBordered {...field} placeholder={t('slug.placeholder')} />
+                <Input
+                  type="text"
+                  isBordered
+                  {...field}
+                  placeholder={t('slug.placeholder')}
+                  value={field.value as string}
+                  className="border border-input text-sm text-foreground"
+                />
               </div>
             </FormControl>
+            {form.formState.errors.slug && <p className="text-2xs text-destructive">{t('slug.error')}</p>}
           </FormItem>
         )}
       />

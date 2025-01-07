@@ -28,7 +28,14 @@ export const fieldsFormLink = () => {
       placeholder: t('longUrl.placeholder'),
       error: t('longUrl.error')
     },
-    { id: '3', name: 'slug', type: 'text', label: t('slug.label'), placeholder: t('slug.placeholder'), error: '' },
+    {
+      id: '3',
+      name: 'slug',
+      type: 'text',
+      label: t('slug.label'),
+      placeholder: t('slug.placeholder'),
+      error: t('slug.error')
+    },
     {
       id: '4',
       name: 'temporal',

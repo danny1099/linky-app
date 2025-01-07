@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { globalFont } from '@/config/fonts'
 import { ServerProviders, ClientProvider } from '@/lib/providers'
+import { Toaster } from '@/modules/common/components'
 import '@/globals.css'
 
 interface RootLayoutProps extends Readonly<Children> {
@@ -16,6 +17,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
         <ServerProviders>
           <ClientProvider>{children}</ClientProvider>
         </ServerProviders>
+        <Toaster position="top-right" />
       </body>
     </html>
   )
@@ -23,8 +25,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
 export const metadata: Metadata = {
   title: 'Linky | Url Shortener',
-  description:
-    'Linky is a simple and easy to use url shortener platform that allows you to shorten your long urls.',
+  description: 'Linky is a simple and easy to use url shortener platform that allows you to shorten your long urls.',
   icons: {
     icon: [
       {

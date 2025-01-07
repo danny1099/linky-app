@@ -31,6 +31,9 @@
       "qr": "Qr Codes"
     }
   },
+  "redirect": {
+    "title": "We will redirect you in a few seconds..."
+  },
   "links": {
     "title": "Links",
     "description": "In this section you can see all your links created",
@@ -47,6 +50,11 @@
     "form": {
       "submit": "Create Link",
       "cancel": "Cancel",
+      "success": "Link created successfully",
+      "updated": "Link updated successfully",
+      "deleted": "Link deleted successfully",
+      "error": "There was an error creating the link",
+      "slug-error": "Custom link already exists, try another one",
       "title": {
         "label": "Title",
         "placeholder": "Define a title for your link",
@@ -59,7 +67,8 @@
       },
       "slug": {
         "label": "Custom Link (Optional)",
-        "placeholder": "Define a custom name for your link"
+        "placeholder": "Define a custom name for your link",
+        "error": "Custom link must be between 2 and 6 characters."
       },
       "temporal": {
         "label": "This link will be valid for 7 days",
