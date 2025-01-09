@@ -7,7 +7,7 @@ export const EmptyLinks = async ({ className }: { className?: string }) => {
 
   return (
     <div className={cn('my-auto flex w-full flex-col items-center', className)}>
-      <img src="/images/img-empty.svg" alt="Empty image of links" className="size-60" loading="eager" />
+      <img src="/images/img-empty-data.svg" alt="Empty image of links" className="size-60" loading="eager" />
       <div className="flex w-full flex-col items-center justify-center">
         <Heading type="h4" className="text-sm font-medium text-foreground">
           {t('title')}

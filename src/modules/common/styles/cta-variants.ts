@@ -10,7 +10,7 @@ export const ctaVariants = cva(
         tertiary: 'bg-tertiary text-tertiary-foreground',
         danger: 'bg-destructive text-destructive-foreground',
         outline: 'bg-background text-foreground border border-border',
-        accent: 'bg-accent text-accent-foreground',
+        accent: 'bg-accent text-accent-foreground border border-border',
         ghost: 'bg-transparent border-none text-foreground',
         link: 'bg-background border-none text-foreground justify-start hover:bg-secondary hover:text-secondary-foreground'
       },

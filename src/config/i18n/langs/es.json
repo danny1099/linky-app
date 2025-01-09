@@ -20,7 +20,7 @@
   "home": {
     "title": "El acortador de URL para enlaces de alto rendimiento.",
     "description": "Linky es un acortador de URL simple y fácil de usar que te permite acortar tus URLs largas.",
-    "input-placeholder": "Introduce tu url larga va aqui...",
+    "input-placeholder": "https://ejemplo.com/mi-url-larga",
     "button-text": "Acortar"
   },
   "menu": {
@@ -32,14 +32,17 @@
     }
   },
   "redirect": {
-    "title": "Te redirigiremos en unos segundos..."
+    "title": "Te redirigiremos en unos segundos...",
+    "button-text": "Ir al inicio!",
+    "error_title": "Oops! Algo salio mal",
+    "error_message": "Error al redirigir, el link no existe o ha expirado"
   },
   "links": {
     "title": "Links",
     "description": "En esta sección puedes ver todos tus enlaces creados",
     "new-link": "Crear Link",
     "no-links": "No tienes enlaces todavía",
-    "search": "Escribre algo para buscar...",
+    "search": "Escribe algo para buscar...",
     "empty": {
       "title": "Aquí no hay mucho contenido aún",
       "description": "Por que no agregas algún link?."

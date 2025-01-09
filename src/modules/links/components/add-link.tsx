@@ -12,13 +12,10 @@ export const AddLink = ({ className }: Props) => {
   const t = useTranslations('links')
 
   return (
-    <Navlink
-      href={getPrivateRoute('new_link')}
-      icon="plus-lg"
-      direction="end"
-      className={cn('w-full', className)}
-    >
-      {t('new-link')}
-    </Navlink>
+    <div className={cn('flex w-full', className)}>
+      <Navlink href={getPrivateRoute('new_link')} icon="plus-lg" direction="end" className="w-full md:w-fit">
+        {t('new-link')}
+      </Navlink>
+    </div>
   )
 }

@@ -20,7 +20,7 @@
   "home": {
     "title": "The URL Shortener for high-performing links.",
     "description": "Linky is a simple and easy to use url shortener platform that allows you to shorten your long urls.",
-    "input-placeholder": "Put your long url go here...",
+    "input-placeholder": "https://example.com/my-long-url",
     "button-text": "Shorten"
   },
   "menu": {
@@ -32,7 +32,10 @@
     }
   },
   "redirect": {
-    "title": "We will redirect you in a few seconds..."
+    "title": "We will redirect you in a few seconds...",
+    "button-text": "Take me to the home!",
+    "error_title": "Oops! Something went wrong",
+    "error_message": "Link cannot be found or has been deleted"
   },
   "links": {
     "title": "Links",

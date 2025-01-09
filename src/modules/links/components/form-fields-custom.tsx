@@ -1,5 +1,6 @@
 'use client'
 import { useTranslations } from 'next-intl'
+import { APP_NAME } from '@/config/constants'
 import { FormControl, FormField, FormItem, FormLabel, Input } from '@/modules/common/components'
 import { cn } from '@/modules/common/utils'
 
@@ -22,7 +23,7 @@ export const CustomLink = ({ form, className }: Props) => {
             <FormControl>
               <div className="flex w-full flex-row items-center gap-x-2">
                 <span className="flex h-full w-fit items-center rounded-md border border-border bg-secondary p-3 text-xs font-medium text-foreground">
-                  Linky.com
+                  {APP_NAME}
                 </span>{' '}
                 /
                 <Input

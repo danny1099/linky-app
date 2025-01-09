@@ -14,7 +14,7 @@ import { api } from '@/server/client'
 export const FormLink = () => {
   const t = useTranslations('links.form')
   const params = useSearchParams()
-  const createLink = api.link.newLink.useMutation()
+  const createLink = api.link.createNewLink.useMutation()
   const form = useForm<z.infer<typeof linkFormSchema>>({
     resolver: zodResolver(linkFormSchema),
     defaultValues: {

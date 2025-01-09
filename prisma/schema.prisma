@@ -27,7 +27,11 @@ model clicks {
   id        String   @id @default(cuid())
   linkId    String
   mode      String
-  origin    String?
+  city      String?
+  country   String?
+  latitude  Decimal?
+  longitude Decimal?
+  languages String?
   device    String?
   ip        String?
   link      links    @relation(fields: [linkId], references: [id])

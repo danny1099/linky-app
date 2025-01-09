@@ -11,3 +11,13 @@ export const linkFormSchema = z.object({
 })
 
 export type NewLink = keyof z.infer<typeof linkFormSchema>
+
+/* Schema for search by id */
+export const searchByIdSchema = z.object({ id: z.string().nonempty({ message: 'Id url is required for search' }) })
+
+/* Schema for search by short url */
+export const searchByUrlSchema = z.object({
+  shortUrl: z.string().nonempty({ message: 'Short url is required for search' }),
+  mode: z.string().max(4).default('link'),
+  device: z.string().max(20).default('desktop')
+})
