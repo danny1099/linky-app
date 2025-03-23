@@ -1,5 +1,46 @@
 {
+  "messages": {
+    "system": {
+      "common/loading": {
+        "title": "Por favor espera...",
+        "description": "Estamos organizando algunas cosas para ti"
+      },
+      "common/error": {
+        "title": "Oops, algo salió mal",
+        "description": "Esto es incómodo, algo no salió como esperábamos"
+      },
+      "common/clipboard": {
+        "title": "Copiado",
+        "description": "El recurso ha sido copiado!"
+      }
+    },
+
+    "validation": {
+      "form/required": "Este campo es requerido",
+      "form/invalid_email": "El correo electrónico no es válido",
+      "form/invalid_password": "La contraseña debe tener al menos 8 caracteres",
+      "form/invalid_url": "Por favor ingresa una URL válida",
+      "form/invalid_custom_link": "El link personalizado debe tener entre 2 y 6 caracteres"
+    }
+  },
+
   "ui": {
+    "themes": {
+      "light": "Tema claro",
+      "dark": "Tema oscuro",
+      "system": "Usar tema del dispositivo"
+    },
+    "lang": {
+      "en": {
+        "locale": "en",
+        "description": "Traducir al idioma inglés (US)"
+      },
+      "es": {
+        "locale": "es",
+        "description": "Traducir al idioma español (ES)"
+      }
+    },
+
     "home": {
       "title": "El acortador de URL para enlaces de alto rendimiento",
       "description": "Linky es un acortador de URL simple y fácil de usar que te permite acortar tus URLs largas.",

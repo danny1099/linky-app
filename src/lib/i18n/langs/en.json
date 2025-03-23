@@ -1,5 +1,46 @@
 {
+  "messages": {
+    "system": {
+      "common/loading": {
+        "title": "Please wait...",
+        "description": "We are organizing some things for you"
+      },
+      "common/error": {
+        "title": "Oops, this is awkward",
+        "description": "We are sorry, something went wrong"
+      },
+      "common/clipboard": {
+        "title": "Copied to clipboard",
+        "description": "The resource has been copied to the clipboard!"
+      }
+    },
+
+    "validation": {
+      "form/required": "This field is required",
+      "form/invalid_email": "Please enter a valid email address",
+      "form/invalid_password": "Password must be at least 8 characters long",
+      "form/invalid_url": "Please enter a valid url",
+      "form/invalid_custom_link": "Custom link must be between 2 and 6 characters"
+    }
+  },
+
   "ui": {
+    "themes": {
+      "light": "Light Mode",
+      "dark": "Dark Mode",
+      "system": "Use theme system"
+    },
+    "lang": {
+      "en": {
+        "locale": "en",
+        "description": "Translate to english language (US)"
+      },
+      "es": {
+        "locale": "es",
+        "description": "Translate to spanish language (ES)"
+      }
+    },
+
     "home": {
       "title": "The URL Shortener for high-performing links",
       "description": "Linky is a simple and easy to use url shortener platform that allows you to shorten your long urls.",

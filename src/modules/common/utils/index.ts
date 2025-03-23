@@ -12,3 +12,13 @@ export function absoluteUrl(path: string) {
 }
 
 export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
+export function detectThemeChange(callback: (theme: 'dark' | 'light') => void) {
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  const handleChange = (event: MediaQueryListEvent) => {
+    const theme = event.matches ? 'dark' : 'light'
+    callback(theme)
+  }
+  mediaQuery.addEventListener('change', handleChange)
+  return () => mediaQuery.removeEventListener('change', handleChange)
+}

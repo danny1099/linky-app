@@ -13,7 +13,7 @@ const toastType = {
 }
 
 export const useToast = () => {
-  const t = useTranslations('system')
+  const t = useTranslations('messages.system')
 
   return (message: Message, type: ToastType = 'success') => {
     Sonner(t(`${message}.title`) || 'Linky App', {
