@@ -1,0 +1,19 @@
+{
+  "messages": {
+    "common/loading": {
+      "title": "Please wait...",
+      "description": "We are organizing some things for you"
+    },
+    "common/error": {
+      "title": "Oops, this is awkward",
+      "description": "We are sorry, something went wrong"
+    },
+    "common/validation": {
+      "form_required": "This field is required",
+      "form_invalid_email": "Please enter a valid email address",
+      "form_invalid_password": "Password must be at least 8 characters long",
+      "form_invalid_url": "Please enter a valid url",
+      "form_invalid_custom_link": "Custom link must be between 2 and 6 characters"
+    }
+  }
+}
