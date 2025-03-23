@@ -1,0 +1,26 @@
+{
+  "system": {
+    "loading": {
+      "title": "Por favor espera...",
+      "description": "Estamos organizando algunas cosas para ti"
+    },
+    "error": {
+      "title": "Oops, algo salió mal",
+      "description": "Esto es incómodo, algo no salió como esperábamos"
+    },
+    "clipboard": {
+      "title": "Copiado",
+      "description": "El recurso ha sido copiado!"
+    }
+  },
+
+  "validation": {
+    "form": {
+      "required": "Este campo es requerido",
+      "invalid_email": "El correo electrónico no es válido",
+      "invalid_password": "La contraseña debe tener al menos 8 caracteres",
+      "invalid_url": "Por favor ingresa una URL válida",
+      "invalid_custom_link": "El nombre personalizado debe tener entre 2 y 6 caracteres"
+    }
+  }
+}

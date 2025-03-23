@@ -1,0 +1,26 @@
+{
+  "system": {
+    "loading": {
+      "title": "Please wait...",
+      "description": "We are organizing some things for you"
+    },
+    "error": {
+      "title": "Oops, this is awkward",
+      "description": "We are sorry, something went wrong"
+    },
+    "clipboard": {
+      "title": "Copied to clipboard",
+      "description": "The resource has been copied to the clipboard!"
+    }
+  },
+
+  "validation": {
+    "form": {
+      "required": "This field is required",
+      "invalid_email": "Please enter a valid email address",
+      "invalid_password": "Password must be at least 8 characters long",
+      "invalid_url": "Please enter a valid url",
+      "invalid_custom_link": "Custom link must be between 2 and 6 characters"
+    }
+  }
+}

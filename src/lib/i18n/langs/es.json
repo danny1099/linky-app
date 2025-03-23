@@ -1,23 +1,16 @@
 {
-  "messages": {
-    "common/loading": {
-      "title": "Por favor espere...",
-      "description": "Estamos organizando algunas cosas para ti"
+  "ui": {
+    "home": {
+      "title": "El acortador de URL para enlaces de alto rendimiento",
+      "description": "Linky es un acortador de URL simple y fácil de usar que te permite acortar tus URLs largas.",
+      "input-placeholder": "https://ejemplo.com/mi-url-larga",
+      "input-button": "Acortar ahora!",
+      "topbar": {
+        "get_started": "Prueba Linky Gratis",
+        "sign_in": "Iniciar sesión",
+        "go_to": "Ir a"
+      }
     },
-    "common/error": {
-      "title": "Ops, algo salió mal",
-      "description": "Esto es incómodo, algo no salió como esperábamos"
-    },
-    "common/copy_to_clipboard": {
-      "title": "Copiado al portapapeles",
-      "description": "El recurso ha sido copiado!"
-    },
-    "common/validation": {
-      "form_required": "Este campo es requerido",
-      "form_invalid_email": "El correo electrónico no es válido",
-      "form_invalid_password": "La contraseña debe tener al menos 8 caracteres",
-      "form_invalid_url": "Por favor ingresa una URL válida",
-      "form_invalid_custom_link": "El link personalizado debe tener entre 2 y 6 caracteres"
-    }
+    "get_started": {}
   }
 }

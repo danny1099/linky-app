@@ -6,7 +6,7 @@
   :root {
     --background: hsl(0 0% 100%);
     --foreground: hsl(240 10% 3.9%);
-    --foreground-muted: hsl(240 3.8% 46.1%);
+    --foreground-muted: hsl(0, 1%, 28%);
     --card: hsl(0 0% 100%);
     --card-foreground: hsl(240 10% 3.9%);
     --popover: hsl(0 0% 100%);
@@ -32,7 +32,7 @@
   .dark {
     --background: hsl(224 71.4% 4.1%);
     --foreground: hsl(210 20% 98%);
-    --foreground-muted: hsl(217.9 10.6% 64.9%);
+    --foreground-muted: hsl(0, 1%, 28%);
     --card: hsl(224 71.4% 4.1%);
     --card-foreground: hsl(210 20% 98%);
     --popover: hsl(224 71.4% 4.1%);
