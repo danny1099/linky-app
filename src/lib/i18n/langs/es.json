@@ -43,9 +43,10 @@
 
     "home": {
       "title": "El acortador de URL para enlaces de alto rendimiento",
-      "description": "Linky es un acortador de URL simple y fácil de usar que te permite acortar tus URLs largas.",
+      "description": "es un acortador de URL simple y fácil de usar que te permite acortar tus URLs largas.",
       "input-placeholder": "https://ejemplo.com/mi-url-larga",
       "input-button": "Acortar ahora!",
+      "pill": "Introduciendo el mejor acortador de URL",
       "topbar": {
         "get_started": "Prueba Linky Gratis",
         "sign_in": "Iniciar sesión",

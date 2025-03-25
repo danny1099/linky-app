@@ -20,11 +20,11 @@ export const ShortenInput = () => {
   }
 
   return (
-    <div className="mt-10 flex w-full flex-col items-center gap-2 p-2 md:flex-row">
+    <div className="mt-10 flex w-full flex-col items-center justify-center gap-2 p-2 md:w-3/4 md:flex-row">
       <Input
         type="text"
         placeholder={t('input-placeholder')}
-        className="w-full"
+        className="w-full md:w-1/2"
         variant="accent"
         value={value}
         slot="start"

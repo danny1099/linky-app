@@ -2,7 +2,7 @@ import { LangToggle, Logo, ThemeToggle } from '@/modules/common/components'
 import { cn } from '@/modules/common/utils'
 
 interface Props {
-  child?: Children
+  child?: React.ReactNode
   className?: string
 }
 
@@ -14,6 +14,7 @@ export const Topbar = ({ child, className }: Props) => {
       <div className="flex h-full w-fit flex-row items-center justify-end gap-x-2">
         <LangToggle />
         <ThemeToggle />
+        {child}
       </div>
     </nav>
   )

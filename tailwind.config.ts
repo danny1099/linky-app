@@ -56,6 +56,19 @@ export default {
         '2xs': '0.70rem',
         '3xs': '0.62rem',
         '4xs': '0.55rem'
+      },
+      animation: {
+        'shiny-text': 'shiny-text 4s infinite'
+      },
+      keyframes: {
+        'shiny-text': {
+          '0%, 90%, 100%': {
+            'background-position': 'calc(-100% - var(--shiny-width)) 0'
+          },
+          '30%, 60%': {
+            'background-position': 'calc(100% + var(--shiny-width)) 0'
+          }
+        }
       }
     }
   },

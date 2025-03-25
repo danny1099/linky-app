@@ -43,11 +43,12 @@
 
     "home": {
       "title": "The URL Shortener for high-performing links",
-      "description": "Linky is a simple and easy to use url shortener platform that allows you to shorten your long urls.",
+      "description": "is a simple and easy to use url shortener platform that allows you to shorten your long urls.",
       "input-placeholder": "https://example.com/my-long-url",
       "input-button": "Let's Shorten!",
+      "pill": "Introducing the best URL shortener",
       "topbar": {
-        "get_started": "Get Linky Free",
+        "get_started": "Try Linky for free",
         "sign_in": "Sign in",
         "go_to": "Go to"
       }
