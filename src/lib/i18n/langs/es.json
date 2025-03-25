@@ -47,6 +47,24 @@
       "input-placeholder": "https://ejemplo.com/mi-url-larga",
       "input-button": "Acortar ahora!",
       "pill": "Introduciendo el mejor acortador de URL",
+      "features": {
+        "title": "Acortar, personalizar y medir: el poder de Linky",
+        "description": "Tu mejor aliado para acortar URL. Haz que tus enlaces destaquen fácilmente.",
+        "items": {
+          "Feature_1": {
+            "title": "Rápido y fiable",
+            "description": "Infraestructura de alto rendimiento asegura que tus enlaces carguen rápidamente cada vez."
+          },
+          "Feature_2": {
+            "title": "Análitica",
+            "description": "Rastrea clics, datos geograficos y referencias con nuestro poderoso análisis."
+          },
+          "Feature_3": {
+            "title": "Links personalizados",
+            "description": "Crea enlaces personalizados que reflejen tu identidad. hazlos faciles de compartir."
+          }
+        }
+      },
       "topbar": {
         "get_started": "Prueba Linky Gratis",
         "sign_in": "Iniciar sesión",

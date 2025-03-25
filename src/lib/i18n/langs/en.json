@@ -47,6 +47,24 @@
       "input-placeholder": "https://example.com/my-long-url",
       "input-button": "Let's Shorten!",
       "pill": "Introducing the best URL shortener",
+      "features": {
+        "title": "Shorten, customize, and measure: the power of Linky",
+        "description": "Your ultimate URL shortener partner. Make your links shine with ease.",
+        "items": {
+          "Feature_1": {
+            "title": "Fast & Reliable",
+            "description": "High-performance infrastructure ensures your links load quickly every time."
+          },
+          "Feature_2": {
+            "title": "Analytics",
+            "description": "Track clicks, geographic data, and referrers with our powerful analytics."
+          },
+          "Feature_3": {
+            "title": "Custom Links",
+            "description": "Create branded, memorable links that reflect your identity. make them easy to share."
+          }
+        }
+      },
       "topbar": {
         "get_started": "Try Linky for free",
         "sign_in": "Sign in",

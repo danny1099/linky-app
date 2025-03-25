@@ -1,4 +1,5 @@
 export * from './badge'
+export * from './blob'
 export * from './brand'
 export * from './button'
 export * from './circle'

@@ -9,10 +9,8 @@ export const NavigateLinks = async () => {
   const getStartedRoute = getPublicRoute('get_started')
 
   return (
-    <>
-      <Navlink href={getStartedRoute} icon="arrow-right" slot="end" size="lg">
-        {t('get_started')}
-      </Navlink>
-    </>
+    <Navlink href={getStartedRoute} icon="arrow-right" slot="end">
+      {t('get_started')}
+    </Navlink>
   )
 }
