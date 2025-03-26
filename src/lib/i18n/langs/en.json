@@ -12,6 +12,39 @@
       "common/clipboard": {
         "title": "Copied to clipboard",
         "description": "The resource has been copied to the clipboard!"
+      },
+
+      "auth/sign-in-provider": {
+        "title": "Sign in successfully",
+        "description": "You have signed in successfully with provider"
+      },
+      "auth/sign-in-provider-error": {
+        "title": "Sign in error",
+        "description": "There was an error signing in with provider"
+      },
+      "auth/missing-credentials": {
+        "title": "Missing credentials",
+        "description": "Please enter your email and password"
+      },
+      "auth/email_exists": {
+        "title": "Email already exists",
+        "description": "Please enter a different email"
+      },
+      "auth/email_not_confirmed": {
+        "title": "Email not confirmed",
+        "description": "Please confirm your email"
+      },
+      "auth/invalid_credentials": {
+        "title": "Invalid credentials",
+        "description": "Please enter a valid email and password"
+      },
+      "auth/account_created": {
+        "title": "Account created",
+        "description": "Your account has been created successfully"
+      },
+      "auth/logged_successfully": {
+        "title": "Logged successfully",
+        "description": "You have logged successfully"
       }
     },
 
@@ -68,9 +101,37 @@
       "topbar": {
         "get_started": "Try Linky for free",
         "sign_in": "Sign in",
-        "go_to": "Go to"
+        "go_to": "Go to Dashboard"
       }
     },
-    "get_started": {}
+    "auth": {
+      "provider": {
+        "button": "Continue with Google",
+        "or": "Or"
+      },
+      "sign_in": {
+        "title": "Sign in to",
+        "description": "Sign in to your account and start shortening your links",
+        "have-account": "Don’t have an account?",
+        "redirect-text": "Sign up"
+      },
+      "get_started": {
+        "title": "Welcome to",
+        "description": "Create your account now and start shortening your links",
+        "have-account": "Already have an account?",
+        "redirect-text": "Sign In"
+      },
+      "form": {
+        "button": "Continue to Linky",
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email address here"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Enter your password here"
+        }
+      }
+    }
   }
 }

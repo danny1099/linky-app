@@ -11,4 +11,5 @@ declare global {
   /* types for messages and keys */
   type UI = keyof IntlMessages['ui']
   type Message = keyof IntlMessages['messages']['system']
+  type Validation = keyof IntlMessages['messages']['validation']
 }

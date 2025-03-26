@@ -12,6 +12,39 @@
       "common/clipboard": {
         "title": "Copiado",
         "description": "El recurso ha sido copiado!"
+      },
+
+      "auth/sign-in-provider": {
+        "title": "Inicio de sesión con éxito",
+        "description": "Has iniciado sesión con proveedor exitosamente"
+      },
+      "auth/sign-in-provider-error": {
+        "title": "Error de inicio de sesión",
+        "description": "Hubo un error al iniciar sesión con el proveedor"
+      },
+      "auth/missing-credentials": {
+        "title": "Credenciales faltantes",
+        "description": "Por favor ingresa tu correo electrónico y contraseña"
+      },
+      "auth/email_exists": {
+        "title": "El correo electrónico ya existe",
+        "description": "Por favor ingresa otro correo electrónico"
+      },
+      "auth/email_not_confirmed": {
+        "title": "Email no confirmado",
+        "description": "Por favor confirma tu correo electrónico"
+      },
+      "auth/invalid_credentials": {
+        "title": "Credenciales inválidas",
+        "description": "Correo electrónico o contraseña incorrectos"
+      },
+      "auth/account_created": {
+        "title": "Cuenta creada exitosamente",
+        "description": "Has creado tu cuenta exitosamente"
+      },
+      "auth/logged_successfully": {
+        "title": "Inicio de sesión exitoso",
+        "description": "Has iniciado sesión exitosamente"
       }
     },
 
@@ -56,21 +89,50 @@
             "description": "Infraestructura de alto rendimiento asegura que tus enlaces carguen rápidamente cada vez."
           },
           "Feature_2": {
-            "title": "Análitica",
-            "description": "Rastrea clics, datos geograficos y referencias con nuestro poderoso análisis."
+            "title": "analítica",
+            "description": "Rastrea clics, datos geográficos y referencias con nuestro poderoso análisis."
           },
           "Feature_3": {
             "title": "Links personalizados",
-            "description": "Crea enlaces personalizados que reflejen tu identidad. hazlos faciles de compartir."
+            "description": "Crea enlaces personalizados que reflejen tu identidad. hazlos fáciles de compartir."
           }
         }
       },
       "topbar": {
         "get_started": "Prueba Linky Gratis",
         "sign_in": "Iniciar sesión",
-        "go_to": "Ir a"
+        "go_to": "Ir al Dashboard"
       }
     },
-    "get_started": {}
+    "auth": {
+      "provider": {
+        "button": "Continuar con Google",
+        "or": "O"
+      },
+      "sign_in": {
+        "title": "Inicia Sesión en",
+        "description": "Inicia sesión con tu cuenta y empieza a acortar tus enlaces",
+        "have-account": "¿Aún no tienes una cuenta?",
+        "redirect-text": "Regístrate"
+      },
+      "get_started": {
+        "title": "Bienvenido a",
+        "description": "Crea tu cuenta ahora y empieza a acortar tus enlaces",
+        "have-account": "¿Ya tienes una cuenta?",
+        "redirect-text": "Inicia sesión"
+      },
+      "form": {
+        "button": "Continue",
+
+        "email": {
+          "label": "Correo",
+          "placeholder": "Ingresa tu correo electrónico aquí"
+        },
+        "password": {
+          "label": "Contraseña",
+          "placeholder": "Ingresa tu contraseña aquí"
+        }
+      }
+    }
   }
 }

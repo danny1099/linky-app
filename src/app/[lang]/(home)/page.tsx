@@ -1,9 +1,9 @@
-import { getTranslate } from '@/lib/i18n/helpers'
+import { getTranslations } from 'next-intl/server'
 import { Blob, Heading, Navlink, Pill, Text, Title } from '@/modules/common/components'
 import { Features, ShortenInput } from '@/modules/home/components'
 
 export default async function Home() {
-  const t = await getTranslate('home')
+  const t = await getTranslations('ui.home')
 
   return (
     <section className="flex size-full flex-col overflow-y-auto bg-background px-4 md:px-24">
@@ -23,12 +23,12 @@ export default async function Home() {
 
       <article className="flex h-fit min-h-full w-full flex-col items-center">
         <Features />
-        <div className="flex w-full flex-col items-center text-center">
+        <div className="flex w-full flex-col items-center py-5 text-center">
           <Heading type="h2" className="mt-5 text-xl font-medium md:text-3xl">
             {t('features.title')}
           </Heading>
           <Text className="line-clamp-2 w-5/6 text-pretty text-xs md:w-1/2">{t('features.description')}</Text>
-          <Navlink href="/get_started" icon="arrow-right" slot="end" size="xl" className="mt-10">
+          <Navlink href="/get_started" icon="arrow-right" slot="end" size="xl" className="mt-5">
             {t('topbar.get_started')}
           </Navlink>
         </div>

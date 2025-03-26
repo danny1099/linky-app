@@ -11,7 +11,7 @@ export const avatarVariants = cva(
       },
       size: {
         md: 'h-8 w-8',
-        sm: 'h-6 w-6',
+        sm: 'h-5 w-5',
         lg: 'h-12 w-12'
       }
     },
@@ -47,12 +47,14 @@ export const ctaVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground shadow',
-        destructive: 'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
-        outline: 'border border-input bg-background shadow-sm',
-        secondary: 'bg-secondary text-secondary-foreground shadow-sm',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'text-primary underline-offset-4'
+        primary: 'bg-primary text-primary-foreground',
+        secondary: 'bg-secondary text-secondary-foreground',
+        tertiary: 'bg-tertiary text-tertiary-foreground',
+        destructive: 'bg-destructive text-destructive-foreground',
+        outline: 'bg-background text-foreground border border-border',
+        accent: 'bg-accent text-accent-foreground border border-border',
+        ghost: 'bg-transparent border-none text-foreground',
+        link: 'bg-background border-none text-foreground justify-start hover:bg-secondary hover:text-secondary-foreground'
       },
       size: {
         default: 'h-9 px-4 py-2',
@@ -63,7 +65,7 @@ export const ctaVariants = cva(
       }
     },
     defaultVariants: {
-      variant: 'default',
+      variant: 'primary',
       size: 'default'
     }
   }
