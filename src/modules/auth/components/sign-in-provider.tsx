@@ -7,7 +7,7 @@ import { api } from '@/server/client'
 
 export const SignWithProvider = () => {
   const t = useTranslations('ui.auth.provider')
-  const apiServices = api.auth.signWithProvider.useMutation()
+  const apiServices = api.auth.loginWithProvider.useMutation()
   const toast = useToast()
   const router = useRouter()
 

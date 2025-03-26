@@ -1,3 +1,4 @@
+export * from './disclaimer'
 export * from './form-auth'
-export * from './form-redirect'
 export * from './sign-in-provider'
+export * from './verify-email'

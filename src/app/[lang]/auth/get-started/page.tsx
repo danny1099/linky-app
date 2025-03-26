@@ -1,21 +1,19 @@
 import { getTranslations } from 'next-intl/server'
-import { Heading, Text } from '@/modules/common/components'
-import { FormAuth } from '@/modules/auth/components'
+import { Heading, Text, Title } from '@/modules/common/components'
+import { Disclaimer, FormAuth } from '@/modules/auth/components'
 
 export default async function GetStarted() {
   const t = await getTranslations('ui.auth.get_started')
 
   return (
     <section className="flex size-full flex-row items-center gap-x-4 bg-background px-4 md:px-24">
-      <article className="h-[85%] w-[60%] overflow-hidden px-2 pb-10 max-sm:hidden">
-        <img
-          src="/images/img-auth-background.svg"
-          alt="Get Started"
-          className="relative mb-2 h-full w-full rounded-xl object-contain"
-          loading="lazy"
-          width={300}
-          height={300}
-        />
+      <article className="relative isolate h-[85%] w-[60%] overflow-hidden px-2 pb-10 max-sm:hidden">
+        <Title className="text-balance text-2xl md:text-3xl">{t('slogan')}</Title>
+        <Text className="mt-5">{t('slogan-description')}</Text>
+        <div className="mt-6 flex w-full flex-row items-center">
+          <Text className="text-foreground md:text-2xs">Powered by</Text>
+          <img src="/images/img-supabase-logo.svg" alt="Supabase logo" className="ml-2 size-4" />
+        </div>
       </article>
 
       <article className="flex h-full w-full flex-col items-center px-2 pt-5 md:w-[40%] md:px-6 md:pt-10">
@@ -26,7 +24,9 @@ export default async function GetStarted() {
           </Heading>
           <Text>{t('description')}</Text>
         </header>
-        <FormAuth type="get_started" />
+
+        <FormAuth />
+        <Disclaimer />
       </article>
     </section>
   )
