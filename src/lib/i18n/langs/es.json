@@ -14,37 +14,33 @@
         "description": "El recurso ha sido copiado!"
       },
 
-      "auth/sign-in-provider": {
-        "title": "Inicio de sesión con éxito",
-        "description": "Has iniciado sesión con proveedor exitosamente"
-      },
-      "auth/sign-in-provider-error": {
-        "title": "Error de inicio de sesión",
-        "description": "Hubo un error al iniciar sesión con el proveedor"
-      },
-      "auth/missing-credentials": {
-        "title": "Credenciales faltantes",
-        "description": "Por favor ingresa tu correo electrónico y contraseña"
-      },
-      "auth/email_exists": {
-        "title": "El correo electrónico ya existe",
-        "description": "Por favor ingresa otro correo electrónico"
-      },
-      "auth/email_not_confirmed": {
-        "title": "Email no confirmado",
-        "description": "Por favor confirma tu correo electrónico"
-      },
-      "auth/invalid_credentials": {
-        "title": "Credenciales inválidas",
-        "description": "Correo electrónico o contraseña incorrectos"
-      },
-      "auth/account_created": {
-        "title": "Cuenta creada exitosamente",
-        "description": "Has creado tu cuenta exitosamente"
-      },
       "auth/logged_successfully": {
         "title": "Inicio de sesión exitoso",
         "description": "Has iniciado sesión exitosamente"
+      },
+      "auth/logout_successfully": {
+        "title": "Sesión cerrada exitosamente",
+        "description": "Has cerrado sesión exitosamente"
+      },
+      "auth/logged_error": {
+        "title": "Error de inicio de sesión",
+        "description": "Hubo un error al iniciar sesión con el proveedor o correo electrónico"
+      },
+      "auth/missing-credentials": {
+        "title": "Credenciales faltantes",
+        "description": "Por favor ingresa un correo electrónico válido"
+      },
+      "auth/user_not_found": {
+        "title": "Usuario no encontrado",
+        "description": "El usuario no fue encontrado o el correo electrónico es incorrecto"
+      },
+      "auth/user_found": {
+        "title": "Usuario encontrado",
+        "description": "El usuario ha sido encontrado con este correo electrónico"
+      },
+      "auth/confirm_email": {
+        "title": "Verifica tu correo electrónico",
+        "description": "Hemos enviado un enlace de verificación a tu correo electrónico. Por favor, revisa tu bandeja de entrada."
       }
     },
 
@@ -109,28 +105,22 @@
         "button": "Continuar con Google",
         "or": "O"
       },
-      "sign_in": {
-        "title": "Inicia Sesión en",
-        "description": "Inicia sesión con tu cuenta y empieza a acortar tus enlaces",
-        "have-account": "¿Aún no tienes una cuenta?",
-        "redirect-text": "Regístrate"
-      },
       "get_started": {
         "title": "Bienvenido a",
-        "description": "Crea tu cuenta ahora y empieza a acortar tus enlaces",
-        "have-account": "¿Ya tienes una cuenta?",
-        "redirect-text": "Inicia sesión"
+        "description": "Continue con tu correo electrónico y empieza a acortar tus enlaces",
+        "slogan": "Tu información está segura con nosotros. No la compartimos con nadie",
+        "slogan-description": "Utilizamos tecnología de seguridad avanzada para garantizar que solo tu puedas acceder a tu información. Cifrado de alto nivel, protección de datos y autenticación segura para tu tranquilidad."
+      },
+      "confirm_email": {
+        "title": "Verifica tu correo",
+        "description": "Hemos enviado un enlace de verificación a tu correo electrónico. Por favor, revisa tu bandeja de entrada.",
+        "resend": "No lo he recibido? Enviarlo de nuevo"
       },
       "form": {
-        "button": "Continue",
-
+        "button": "Continuar a Linky",
         "email": {
           "label": "Correo",
           "placeholder": "Ingresa tu correo electrónico aquí"
-        },
-        "password": {
-          "label": "Contraseña",
-          "placeholder": "Ingresa tu contraseña aquí"
         }
       }
     }

@@ -14,37 +14,33 @@
         "description": "The resource has been copied to the clipboard!"
       },
 
-      "auth/sign-in-provider": {
-        "title": "Sign in successfully",
-        "description": "You have signed in successfully with provider"
-      },
-      "auth/sign-in-provider-error": {
-        "title": "Sign in error",
-        "description": "There was an error signing in with provider"
-      },
-      "auth/missing-credentials": {
-        "title": "Missing credentials",
-        "description": "Please enter your email and password"
-      },
-      "auth/email_exists": {
-        "title": "Email already exists",
-        "description": "Please enter a different email"
-      },
-      "auth/email_not_confirmed": {
-        "title": "Email not confirmed",
-        "description": "Please confirm your email"
-      },
-      "auth/invalid_credentials": {
-        "title": "Invalid credentials",
-        "description": "Please enter a valid email and password"
-      },
-      "auth/account_created": {
-        "title": "Account created",
-        "description": "Your account has been created successfully"
-      },
       "auth/logged_successfully": {
-        "title": "Logged successfully",
-        "description": "You have logged successfully"
+        "title": "Sign in successfully",
+        "description": "You have signed in successfully"
+      },
+      "auth/logout_successfully": {
+        "title": "Sign out successfully",
+        "description": "You have signed out successfully"
+      },
+      "auth/logged_error": {
+        "title": "Sign in error",
+        "description": "There was an error signing in with provider or email"
+      },
+      "auth/missing_credentials": {
+        "title": "Missing credentials",
+        "description": "Please enter an email address valid"
+      },
+      "auth/user_not_found": {
+        "title": "User not found",
+        "description": "The user was not found or email address is invalid"
+      },
+      "auth/user_found": {
+        "title": "User found",
+        "description": "The user was found with this email address"
+      },
+      "auth/confirm_email": {
+        "title": "Verify your email",
+        "description": "We've sent a verification link to your email address. Please check your inbox."
       }
     },
 
@@ -107,29 +103,25 @@
     "auth": {
       "provider": {
         "button": "Continue with Google",
-        "or": "Or"
-      },
-      "sign_in": {
-        "title": "Sign in to",
-        "description": "Sign in to your account and start shortening your links",
-        "have-account": "Don’t have an account?",
-        "redirect-text": "Sign up"
+        "or": "OR"
       },
       "get_started": {
         "title": "Welcome to",
-        "description": "Create your account now and start shortening your links",
-        "have-account": "Already have an account?",
-        "redirect-text": "Sign In"
+        "description": "Continue with email address and start shortening your links",
+        "slogan": "Your information is safe with us. We don't share it with anyone",
+        "slogan-description": "We use advanced security technology to ensure that only you can access your information. High-level encryption, data protection, and secure authentication for your peace of mind."
       },
+      "confirm_email": {
+        "title": "Verify your email",
+        "description": "We've sent a verification link to your email address. Please check your inbox.",
+        "resend": "Didn't receive the email? Send it again"
+      },
+
       "form": {
         "button": "Continue to Linky",
         "email": {
           "label": "Email",
           "placeholder": "Enter your email address here"
-        },
-        "password": {
-          "label": "Password",
-          "placeholder": "Enter your password here"
         }
       }
     }

@@ -7,7 +7,7 @@ interface Props {
 /* prettier-ignore */
 export const Blob = ({ className }: Props) => {
   return (
-    <div aria-hidden="true" className={cn('pointer-events-none absolute inset-x-0 top-80 -z-10 transform-gpu overflow-hidden blur-3xl md:top-72 max-sm:top-96', className )}>
+    <div aria-hidden="true" className={cn('pointer-events-none absolute inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl md:top-72 max-sm:top-96', className )}>
       <div
         style={{
           clipPath:
