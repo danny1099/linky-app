@@ -7,20 +7,22 @@ import { prisma } from '@/lib/prisma'
 import { redirect, notFound } from 'next/navigation'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export default async function AnalyticsPage({ params }: PageProps) {
   const user = await getCurrentUser()
+  const { id } = await params
+
   if (!user) {
     redirect('/api/auth/login')
   }
 
   const url = await prisma.url.findFirst({
     where: {
-      id: params.id,
+      id,
       userId: user.id,
     },
     include: {

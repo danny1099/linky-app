@@ -7,14 +7,15 @@ import { prisma } from '@/lib/prisma'
 import { redirect, notFound } from 'next/navigation'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export default async function QRCodePage({ params }: PageProps) {
   const user = await getCurrentUser()
   const { id } = await params
+
   if (!user) {
     redirect('/api/auth/login')
   }
