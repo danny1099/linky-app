@@ -57,7 +57,7 @@ export function QRGenerator({ url }: QRGeneratorProps) {
   }, [qrConfig, shortUrl])
 
   const handleConfigChange = (key: string, value: any) => {
-    setQrConfig((prev) => ({ ...prev, [key]: value }))
+    setQrConfig((prev: any) => ({ ...prev, [key]: value }))
   }
 
   const saveConfig = async () => {
