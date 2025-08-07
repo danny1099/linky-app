@@ -9,7 +9,6 @@ import { toast } from 'sonner'
 import { deleteUrl } from '@/actions/url-actions'
 import Link from 'next/link'
 import { format } from 'date-fns'
-import { SITE_URL } from '@/config/constants'
 
 interface UrlCardProps {
   url: {
@@ -29,7 +28,7 @@ interface UrlCardProps {
 
 export function UrlCard({ url }: UrlCardProps) {
   const [isDeleting, setIsDeleting] = useState(false)
-  const shortUrl = `${SITE_URL}/${url.shortCode}`
+  const shortUrl = `${window.location.origin}/${url.shortCode}` || 'http://localhost:3000'
 
   const copyToClipboard = async (text: string) => {
     try {
