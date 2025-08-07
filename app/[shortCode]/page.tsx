@@ -4,9 +4,7 @@ import { headers } from 'next/headers'
 import { UAParser } from 'ua-parser-js'
 
 interface PageProps {
-  params: {
-    shortCode: string
-  }
+  params: Promise<{ shortCode: string }>
 }
 
 export default async function RedirectPage({ params }: PageProps) {
