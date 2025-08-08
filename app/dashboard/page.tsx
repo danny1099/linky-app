@@ -59,7 +59,7 @@ async function DashboardContent() {
     <div className='min-h-screen bg-gray-50'>
       {/* Header */}
       <header className='bg-white'>
-        <div className='container mx-auto px-4 py-3'>
+        <div className='container mx-auto px-4 py-3 md:px-8'>
           <div className='flex items-center justify-between'>
             <div>
               <h1 className='text-2xl font-bold text-gray-900'>Dashboard</h1>
@@ -75,7 +75,7 @@ async function DashboardContent() {
         </div>
       </header>
 
-      <main className='container mx-auto px-4 py-8'>
+      <main className='container mx-auto px-4 py-8 md:px-8'>
         {/* Stats Cards */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8'>
           {stats.map((stat, index) => (

@@ -30,8 +30,7 @@ export function QRGenerator({ url }: QRGeneratorProps) {
   })
   const [qrDataUrl, setQrDataUrl] = useState('')
   const [isGenerating, setIsGenerating] = useState(false)
-
-  const shortUrl = `${SITE_URL}/${url.shortCode}`
+  const shortUrl = `${window.location.origin}/${url.shortCode}`
 
   const generateQR = async () => {
     setIsGenerating(true)

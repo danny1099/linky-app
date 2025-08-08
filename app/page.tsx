@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import {Logo} from '@/components/ui/logo'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import {
   Zap,
@@ -49,14 +50,14 @@ export default function HomePage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50'>
       {/* Header */}
-      <header className='bg-white/80 backdrop-blur-sm sticky top-0 z-50'>
+      <header className='bg-white/80 backdrop-blur-sm sticky top-0 z-50 px-4 md:px-14'>
         <div className='container mx-auto px-4 py-4'>
           <div className='flex items-center justify-between'>
             <div className='flex items-center gap-2'>
               <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center'>
-                <Zap className='w-5 h-5 text-white' />
+                <Logo />
               </div>
-              <span className='text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent'>
+              <span className='text-xl font-bold text-foreground'>
                 Linky
               </span>
             </div>
@@ -71,7 +72,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className='container mx-auto px-4 py-20'>
+      <section className='container mx-auto px-4 py-20 px-4 md:px-14'>
         <div className='text-center max-w-4xl mx-auto'>
           <h1 className='text-5xl md:text-7xl font-bold tracking-tight mb-8'>
             <span className='bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent'>
@@ -99,7 +100,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Grid */}
-      <section className='container mx-auto px-4 py-20'>
+      <section className='container mx-auto px-4 py-20 px-4 md:px-14'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
             Everything you need to manage URLs
@@ -129,22 +130,22 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white'>
+      <section className='bg-gray-100 text-gray-800 px-4 md:px-14'>
         <div className='container mx-auto px-4 py-20'>
           <div className='text-center max-w-3xl mx-auto'>
             <h2 className='text-3xl md:text-4xl font-bold'>Ready to supercharge your links?</h2>
-            <p className='text-sm mb-8 text-blue-100'>
+            <p className='text-sm mb-8 text-gray-400'>
               Join thousands of creators and businesses using LinkShort to manage their URLs
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Button size='lg' variant='secondary' className='text-lg px-8 py-6' asChild>
+              <Button size='lg' variant="default" className='text-lg px-8 py-6' asChild>
                 <Link href='/api/auth/login'>
                   Get Started Free
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Link>
               </Button>
             </div>
-            <div className='mt-8 flex items-center justify-center gap-6 text-sm text-blue-100'>
+            <div className='mt-8 flex items-center justify-center gap-6 text-sm text-blue-600'>
               <div className='flex items-center gap-2'>
                 <CheckCircle className='w-4 h-4' />
                 <span>Free forever plan</span>
@@ -163,16 +164,16 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className='bg-gray-200 text-gray-800'>
-        <div className='container mx-auto px-4 py-12'>
-          <div className='flex items-center justify-center gap-2 mb-8'>
+      <footer className='bg-white text-gray-800 px-4 md:px-14'>
+        <div className='container mx-auto px-4 py-4'>
+          <div className='flex items-center justify-center gap-2 mb-3'>
             <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center'>
-              <Zap className='w-5 h-5 text-white' />
+              <Logo />
             </div>
             <span className='text-xl font-bold'>Linky</span>
           </div>
-          <div className='text-center text-gray-600 text-xs'>
-            <p>&copy; 2025 LinkShort. All rights reserved.</p>
+          <div className='text-center text-gray-400 text-xs'>
+            <p>&copy; 2025 Linky. All rights reserved.</p>
           </div>
         </div>
       </footer>
