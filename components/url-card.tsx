@@ -59,7 +59,7 @@ export function UrlCard({ url }: UrlCardProps) {
         <div className='flex items-start justify-between'>
           <div className='flex-1 min-w-0'>
             <CardTitle className='text-lg truncate'>{url.title || 'Untitled'}</CardTitle>
-            <CardDescription className='mt-1'>{url.description || url.originalUrl}</CardDescription>
+            <CardDescription className='mt-1 text-xs line-clamp-1'>{url.description || url.originalUrl}</CardDescription>
           </div>
           <div className='flex items-center gap-1 ml-2'>
             {url.isActive ? (
