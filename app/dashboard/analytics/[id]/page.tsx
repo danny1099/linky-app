@@ -57,3 +57,9 @@ export default async function AnalyticsPage({ params }: PageProps) {
     </main>
   )
 }
+
+export const metadata = {
+  title: 'Analytics | Linky URL Shortener',
+  description:
+    'Detailed analytics for your URLs with Linky. Track clicks, locations, and engagement.',
+}

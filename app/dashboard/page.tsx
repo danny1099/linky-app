@@ -109,3 +109,8 @@ export default async function Dashboard() {
     </main>
   )
 }
+
+export const metadata = {
+  title: 'Dashboard | Linky URL Shortener',
+  description: 'Manage your URLs with Dashboard, review analytics, and create custom QR codes.',
+}

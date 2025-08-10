@@ -16,9 +16,9 @@ export default function RootLayout({ children }: Children) {
 }
 
 export const metadata: Metadata = {
-  title: 'Linky | URL Shortener',
+  title: 'Linky - URL Shortener with Advanced Analytics | Free QR Code',
   description:
-    'Linky is a simple and easy to use url shortener platform that allows you to shorten your long urls.',
+    'Shorten URLs for free with LinkShort. Advanced analytics, custom QR codes, and 99.9% uptime. Ideal for businesses and creators. Try it for free!',
   icons: {
     icon: [
       {

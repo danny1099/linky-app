@@ -37,3 +37,8 @@ export default async function QRCodePage({ params }: PageProps) {
     </main>
   )
 }
+
+export const metadata = {
+  title: 'QR Code Generator | Linky URL Shortener',
+  description: 'Generate QR codes for your links with our easy-to-use QR code generator.',
+}

@@ -37,3 +37,9 @@ export default async function EditUrlPage({ params }: PageProps) {
     </main>
   )
 }
+
+export const metadata = {
+  title: 'Edit URL | Linky URL Shortener',
+  description:
+    'Update and manage your URLs with Linky. Transform long URLs into short, shareable links.',
+}

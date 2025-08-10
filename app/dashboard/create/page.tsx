@@ -14,3 +14,9 @@ export default async function CreateUrlPage() {
     </main>
   )
 }
+
+export const metadata = {
+  title: 'Shorten URL | Linky URL Shortener',
+  description:
+    'Create and manage your URLs with Linky. Transform long URLs into short, shareable links.',
+}

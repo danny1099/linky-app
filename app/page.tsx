@@ -95,11 +95,13 @@ export default function HomePage() {
       {/* Features Grid */}
       <section className='container mx-auto py-20 px-4 md:px-14'>
         <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-2'>
+          <h2 className='text-4xl font-bold text-gray-900 mb-2'>
             Everything you need to manage URLs
           </h2>
-          <p className='text-sm text-gray-600 max-w-2xl mx-auto'>
-            Powerful features designed for modern businesses and creators to optimize their links
+          <p className='text-sm text-gray-600 max-w-3xl mx-auto'>
+            Linky It's the most elegant and powerful URL shortener on the market. With advanced
+            analytics, customizable QR codes, and enterprise-grade reliability, it's the perfect
+            tool for managing your links professionally.
           </p>
         </div>
 
