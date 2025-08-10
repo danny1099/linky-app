@@ -72,14 +72,12 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className='container mx-auto px-4 py-20 md:px-14'>
         <div className='text-center max-w-4xl mx-auto'>
-          <h1 className='text-5xl md:text-7xl font-bold tracking-tight mb-8'>
+          <h1 className='text-6xl font-bold tracking-tight mb-4'>
             <span className='bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent'>
-              Shorten URLs
+              The URL Shortener for high-performing links
             </span>
-            <br />
-            <span className='text-gray-900'>Track Everything</span>
           </h1>
-          <p className='text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed'>
+          <p className='text-sm text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed'>
             The most elegant and powerful URL shortener with advanced analytics, custom QR codes,
             and enterprise-grade reliability.
           </p>
@@ -90,9 +88,6 @@ export default function HomePage() {
                 <Zap className='w-5 h-5 ml-2' />
               </Link>
             </Button>
-            <Button size='lg' variant='outline' className='text-lg px-8 py-6'>
-              View Demo
-            </Button>
           </div>
         </div>
       </section>
@@ -100,11 +95,11 @@ export default function HomePage() {
       {/* Features Grid */}
       <section className='container mx-auto py-20 px-4 md:px-14'>
         <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-2'>
             Everything you need to manage URLs
           </h2>
-          <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-            Powerful features designed for modern businesses and creators
+          <p className='text-sm text-gray-600 max-w-2xl mx-auto'>
+            Powerful features designed for modern businesses and creators to optimize their links
           </p>
         </div>
 
@@ -165,7 +160,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className='bg-white text-gray-800 px-4 md:px-14'>
-        <div className='container mx-auto px-4 py-4'>
+        <div className='container mx-auto px-4 py-10'>
           <div className='flex items-center justify-center gap-2 mb-3'>
             <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center'>
               <Logo />
