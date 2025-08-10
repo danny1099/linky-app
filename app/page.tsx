@@ -48,7 +48,7 @@ export default function HomePage() {
   ]
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50'>
+    <div className='min-h-screen bg-background'>
       {/* Header */}
       <header className='bg-white/80 backdrop-blur-sm sticky top-0 z-50 px-4 md:px-14'>
         <div className='container mx-auto px-4 py-4'>
@@ -125,24 +125,22 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white'>
+      <section className='bg-secondary text-foreground'>
         <div className='container mx-auto px-4 md:px-14 py-20'>
           <div className='text-center max-w-3xl mx-auto'>
-            <h2 className='text-2xl md:text-3xl font-bold mb-1'>
-              Ready to supercharge your links?
-            </h2>
-            <p className='text-base mb-8 text-blue-100'>
-              Join thousands of creators and businesses using LinkShort to manage their URLs
+            <h2 className='text-3xl font-bold mb-1'>Ready to supercharge your links?</h2>
+            <p className='text-base mb-8 text-muted-foreground'>
+              Join thousands of creators and businesses using Linky to manage their URLs
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Button size='lg' variant='secondary' className='text-lg px-8 py-6' asChild>
+              <Button size='lg' variant='default' className='text-lg px-8 py-6' asChild>
                 <Link href='/api/auth/login'>
                   Get Started Free
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Link>
               </Button>
             </div>
-            <div className='mt-8 flex items-center justify-center gap-6 text-sm text-blue-100'>
+            <div className='mt-8 flex items-center justify-center gap-6 text-sm text-foreground'>
               <div className='flex items-center gap-2'>
                 <CheckCircle className='w-4 h-4' />
                 <span>Free forever plan</span>
@@ -163,13 +161,13 @@ export default function HomePage() {
       {/* Footer */}
       <footer className='bg-white text-gray-800 px-4 md:px-14'>
         <div className='container mx-auto px-4 py-10'>
-          <div className='flex items-center justify-center gap-2 mb-3'>
+          <div className='flex items-center justify-center gap-2 mb-2'>
             <div className='w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center'>
               <Logo />
             </div>
-            <span className='text-xl font-bold'>Linky</span>
+            <span className='text-lg font-bold'>Linky | URL Shortener</span>
           </div>
-          <div className='text-center text-gray-400 text-xs'>
+          <div className='text-center text-muted-foreground text-xs'>
             <p>&copy; 2025 Linky. All rights reserved.</p>
           </div>
         </div>
