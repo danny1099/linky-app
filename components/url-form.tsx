@@ -1,14 +1,14 @@
 'use client'
 
-import { useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Switch } from '@/components/ui/switch'
-import { Link, Zap } from 'lucide-react'
+import { Zap } from 'lucide-react'
 import { createShortUrl, updateUrl } from '@/actions/url-actions'
+import Link from 'next/link'
 
 interface UrlFormProps {
   url?: {
@@ -24,13 +24,10 @@ interface UrlFormProps {
 }
 
 export function UrlForm({ url, isEdit = false }: UrlFormProps) {
-  const [isCustom, setIsCustom] = useState(!!url?.customCode)
-
   return (
-    <Card className='w-full max-w-2xl mx-auto'>
+    <Card className='w-full md:max-w-lg mx-auto'>
       <CardHeader>
         <CardTitle className='flex items-center gap-2'>
-          <Link className='w-5 h-5' />
           {isEdit ? 'Edit URL' : 'Shorten URL'}
         </CardTitle>
         <CardDescription>
@@ -43,34 +40,47 @@ export function UrlForm({ url, isEdit = false }: UrlFormProps) {
       <CardContent>
         <form
           action={isEdit ? updateUrl.bind(null, url!.id) : createShortUrl}
-          className='space-y-6'>
-          {!isEdit && (
-            <div className='space-y-2'>
-              <Label htmlFor='originalUrl'>Original URL*</Label>
-              <Input
-                id='originalUrl'
-                name='originalUrl'
-                type='url'
-                placeholder='https://example.com/very-long-url'
-                defaultValue={url?.originalUrl}
-                required
-                className='h-12'
-              />
-            </div>
-          )}
-
-          <div className='space-y-2'>
+          className='space-y-4'>
+          <div>
             <Label htmlFor='title'>Title</Label>
             <Input
               id='title'
               name='title'
               placeholder='My awesome link'
               defaultValue={url?.title || ''}
-              className='h-12'
+              className='h-10'
             />
           </div>
-
-          <div className='space-y-2'>
+          <div>
+            <Label htmlFor='originalUrl'>Original URL*</Label>
+            <Input
+              id='originalUrl'
+              name='originalUrl'
+              type='url'
+              placeholder='https://example.com/very-long-url'
+              defaultValue={url?.originalUrl}
+              required
+              className='h-10'
+            />
+          </div>
+          <div className='flex flex-col gap-1'>
+            <Label htmlFor='customCode'>Custom Link</Label>
+            <div className='flex items-center gap-1'>
+              <span className='items-center rounded-md border border-border bg-secondary p-2 h-10 w-3/4 flex text-xs font-medium text-foreground'>
+                {typeof window !== 'undefined' && window.location.origin}/
+              </span>
+              <Input
+                id='customCode'
+                name='customCode'
+                placeholder='my-link'
+                defaultValue={url?.customCode || ''}
+                pattern='^[a-zA-Z0-9-_]+$'
+                title='Only letters, numbers, hyphens, and underscores allowed'
+                className='h-10 w-full'
+              />
+            </div>
+          </div>
+          <div>
             <Label htmlFor='description'>Description</Label>
             <Textarea
               id='description'
@@ -80,37 +90,6 @@ export function UrlForm({ url, isEdit = false }: UrlFormProps) {
               rows={3}
             />
           </div>
-
-          {!isEdit && (
-            <div className='space-y-4'>
-              <div className='flex items-center justify-between'>
-                <Label htmlFor='custom-toggle' className='text-sm font-medium'>
-                  Custom short code
-                </Label>
-                <Switch id='custom-toggle' checked={isCustom} onCheckedChange={setIsCustom} />
-              </div>
-
-              {isCustom && (
-                <div className='space-y-2'>
-                  <Label htmlFor='customCode'>Custom Code</Label>
-                  <div className='flex items-center gap-2'>
-                    <span className='text-sm text-gray-500'>
-                      {typeof window !== 'undefined' && window.location.origin}/
-                    </span>
-                    <Input
-                      id='customCode'
-                      name='customCode'
-                      placeholder='my-link'
-                      defaultValue={url?.customCode || ''}
-                      pattern='^[a-zA-Z0-9-_]+$'
-                      title='Only letters, numbers, hyphens, and underscores allowed'
-                      className='h-12'
-                    />
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
 
           {isEdit && (
             <div className='flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg'>
@@ -126,9 +105,14 @@ export function UrlForm({ url, isEdit = false }: UrlFormProps) {
             </div>
           )}
 
-          <Button type='submit' className='w-full h-12 text-sm'>
+          <Button type='submit' className='w-full h-12 text-xs'>
             <Zap className='w-4 h-4 mr-2' />
             {isEdit ? 'Update URL' : 'Shorten URL'}
+          </Button>
+          <Button variant='outline' asChild>
+            <Link href='/dashboard' className='flex flex-row items-center w-full text-xs'>
+              Cancel
+            </Link>
           </Button>
         </form>
       </CardContent>

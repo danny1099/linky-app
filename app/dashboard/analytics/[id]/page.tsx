@@ -37,30 +37,23 @@ export default async function AnalyticsPage({ params }: PageProps) {
   }
 
   return (
-    <div className='min-h-screen bg-gray-50'>
-      {/* Header */}
-      <header className='bg-white'>
-        <div className='container mx-auto px-4 py-3'>
-          <div className='flex items-center gap-4'>
-            <Button variant='ghost' size='sm' asChild>
-              <Link href='/dashboard'>
-                <ArrowLeft className='w-4 h-4 mr-2' />
-                Back
-              </Link>
-            </Button>
-            <div>
-              <h1 className='text-2xl font-bold text-gray-900'>Analytics</h1>
-              <p className='text-gray-600 text-sm'>
-                Detailed insights for: {url.title || url.originalUrl}
-              </p>
-            </div>
-          </div>
+    <main className='container mx-auto px-4'>
+      <div className='p-2 flex items-center justify-between'>
+        <Link href='/dashboard'>
+          <Button variant='ghost'>
+            <ArrowLeft className='mr-2 h-4 w-4' />
+            Back
+          </Button>
+        </Link>
+        <div className='text-right'>
+          <h1 className='text-xl font-bold text-gray-900'>Analytics</h1>
+          <p className='text-gray-600 text-xs'>
+            Detailed insights for:
+            <span className='font-semibold'>{url.title || url.shortCode}</span>
+          </p>
         </div>
-      </header>
-
-      <main className='container mx-auto px-4 py-8'>
-        <AnalyticsChart clicks={url.clicks} totalClicks={url.clicks.length} />
-      </main>
-    </div>
+      </div>
+      <AnalyticsChart clicks={url.clicks} totalClicks={url.clicks.length} />
+    </main>
   )
 }

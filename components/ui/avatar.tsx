@@ -1,50 +1,56 @@
-'use client';
+import { cva, type VariantProps } from 'class-variance-authority'
+import { cn } from '@/lib/utils'
 
-import * as React from 'react';
-import * as AvatarPrimitive from '@radix-ui/react-avatar';
+export const avatarVariants = cva(
+  'relative inline-flex items-center justify-center bg-secondary text-secondary-foreground ring-offset-1 transition-colors ring-1 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  {
+    variants: {
+      variant: {
+        rounded: 'rounded-full',
+        squared: 'rounded-md',
+      },
+      size: {
+        md: 'h-9 w-9',
+        sm: 'h-6 w-6',
+        lg: 'h-12 w-12',
+      },
+      ring: {
+        white: 'ring-white',
+        black: 'ring-black',
+        blue: 'ring-blue-500',
+        red: 'ring-red-500',
+        green: 'ring-green-500',
+        yellow: 'ring-yellow-500',
+        purple: 'ring-purple-500',
+        pink: 'ring-pink-500',
+        gray: 'bg-gray-400',
+      },
+    },
+    defaultVariants: {
+      variant: 'rounded',
+      size: 'md',
+      ring: 'white',
+    },
+  }
+)
 
-import { cn } from '@/lib/utils';
+export interface AvatarProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof avatarVariants> {
+  src: string
+  isBordered?: boolean
+}
 
-const Avatar = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Root
-    ref={ref}
-    className={cn(
-      'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',
-      className
-    )}
-    {...props}
-  />
-));
-Avatar.displayName = AvatarPrimitive.Root.displayName;
-
-const AvatarImage = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Image>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Image
-    ref={ref}
-    className={cn('aspect-square h-full w-full', className)}
-    {...props}
-  />
-));
-AvatarImage.displayName = AvatarPrimitive.Image.displayName;
-
-const AvatarFallback = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Fallback>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Fallback
-    ref={ref}
-    className={cn(
-      'flex h-full w-full items-center justify-center rounded-full bg-muted',
-      className
-    )}
-    {...props}
-  />
-));
-AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
-
-export { Avatar, AvatarImage, AvatarFallback };
+/* prettier-ignore */
+export const Avatar = ({ src, className, variant, size, ring = "green", isBordered }: AvatarProps) => {
+  return (
+    <div className={cn(avatarVariants({ variant, size, ring }), isBordered && "border border-border", className)}>
+      <img
+        src={src}
+        alt="Avatar of user"
+        className="aspect-square size-full rounded-full object-cover"
+        loading="eager"
+      />
+    </div>
+  );
+};

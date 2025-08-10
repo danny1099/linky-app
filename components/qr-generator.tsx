@@ -1,7 +1,14 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { SITE_URL } from '@/config/constants'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -11,6 +18,7 @@ import { updateQRConfig } from '@/actions/url-actions'
 import QRCode from 'qrcode'
 import Image from 'next/image'
 import { toast } from 'sonner'
+import Link from 'next/link'
 
 interface QRGeneratorProps {
   url: {
@@ -79,8 +87,7 @@ export function QRGenerator({ url }: QRGeneratorProps) {
   }
 
   return (
-    <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-      {/* QR Code Preview */}
+    <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 px-4'>
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
@@ -89,7 +96,7 @@ export function QRGenerator({ url }: QRGeneratorProps) {
           </CardTitle>
           <CardDescription>Scan to access: {shortUrl}</CardDescription>
         </CardHeader>
-        <CardContent className='flex flex-col items-center space-y-4'>
+        <CardContent className='flex flex-col items-center'>
           <div className='p-6 bg-gray-50 dark:bg-gray-800 rounded-lg'>
             {isGenerating ? (
               <div className='w-64 h-64 flex items-center justify-center bg-gray-200 dark:bg-gray-700 rounded'>
@@ -126,7 +133,6 @@ export function QRGenerator({ url }: QRGeneratorProps) {
           <CardDescription>Customize your QR code appearance</CardDescription>
         </CardHeader>
         <CardContent className='space-y-6'>
-          {/* Size */}
           <div className='space-y-2'>
             <Label>Size: {qrConfig.size}px</Label>
             <Slider
@@ -138,8 +144,6 @@ export function QRGenerator({ url }: QRGeneratorProps) {
               className='w-full'
             />
           </div>
-
-          {/* Margin */}
           <div className='space-y-2'>
             <Label>Margin: {qrConfig.margin}</Label>
             <Slider
@@ -151,8 +155,6 @@ export function QRGenerator({ url }: QRGeneratorProps) {
               className='w-full'
             />
           </div>
-
-          {/* Colors */}
           <div className='grid grid-cols-2 gap-4'>
             <div className='space-y-2'>
               <Label htmlFor='fgColor'>Foreground Color</Label>
@@ -172,8 +174,7 @@ export function QRGenerator({ url }: QRGeneratorProps) {
                 />
               </div>
             </div>
-
-            <div className='space-y-2'>
+            <div className='space-y-1'>
               <Label htmlFor='bgColor'>Background Color</Label>
               <div className='flex items-center gap-2'>
                 <Input
@@ -192,12 +193,18 @@ export function QRGenerator({ url }: QRGeneratorProps) {
               </div>
             </div>
           </div>
-
-          <Button onClick={saveConfig} className='w-full'>
+        </CardContent>
+        <CardFooter className='flex flex-col gap-2 '>
+          <Button onClick={saveConfig} className='w-full mt-1'>
             <Palette className='w-4 h-4 mr-2' />
             Save Configuration
           </Button>
-        </CardContent>
+          <Button variant='outline' asChild>
+            <Link href='/dashboard' className='flex flex-row items-center w-full'>
+              Cancel
+            </Link>
+          </Button>
+        </CardFooter>
       </Card>
     </div>
   )

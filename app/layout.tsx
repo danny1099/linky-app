@@ -2,12 +2,13 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { globalFont } from '@/config/fonts'
 import { Toaster } from 'sonner'
+import { ThemeProvider } from '@/components/theme-provider'
 
 export default function RootLayout({ children }: Children) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body className={`${globalFont.className} antialiased`}>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
         <Toaster position='top-right' />
       </body>
     </html>

@@ -28,7 +28,7 @@ interface UrlCardProps {
 
 export function UrlCard({ url }: UrlCardProps) {
   const [isDeleting, setIsDeleting] = useState(false)
-  const shortUrl = `${window.location.origin}/${url.shortCode}` || 'http://localhost:3000'
+  const shortUrl = `${window.location.origin}/${url.shortCode}`
 
   const copyToClipboard = async (text: string) => {
     try {
@@ -59,7 +59,9 @@ export function UrlCard({ url }: UrlCardProps) {
         <div className='flex items-start justify-between'>
           <div className='flex-1 min-w-0'>
             <CardTitle className='text-lg truncate'>{url.title || 'Untitled'}</CardTitle>
-            <CardDescription className='mt-1 text-xs line-clamp-1'>{url.description || url.originalUrl}</CardDescription>
+            <CardDescription className='mt-1 text-xs truncate'>
+              {url.description || url.originalUrl}
+            </CardDescription>
           </div>
           <div className='flex items-center gap-1 ml-2'>
             {url.isActive ? (
@@ -93,7 +95,7 @@ export function UrlCard({ url }: UrlCardProps) {
         </div>
 
         {/* Stats */}
-        <div className='flex items-center justify-between text-sm text-gray-600 dark:text-gray-400'>
+        <div className='flex items-center justify-between text-xs text-gray-600 dark:text-gray-400'>
           <span className='flex items-center gap-1'>
             <BarChart3 className='w-4 h-4' />
             {url._count.clicks} clicks
