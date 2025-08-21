@@ -37,20 +37,25 @@ export default async function RedirectPage({ params }: PageProps) {
   const forwarded = headersList.get('x-forwarded-for')
   const ipAddress = forwarded ? forwarded.split(',')[0].trim() : 'unknown'
 
-  const parser = new UAParser(userAgent)
-  const device = parser.getResult()
+  /* get geolocation with ip api */
+  const response = await fetch(
+    `http://ip-api.com/json/${ipAddress}?fields=status,message,country,city,zip,lat,lon,timezone,isp,org,as,mobile,query`
+  )
+  const data = await response.json()
 
-  // Record the click asynchronously
-  prisma.click
-    .create({
+  if (data) {
+    await prisma.click.create({
       data: {
         urlId: url.id,
         ipAddress,
         userAgent,
+        country: data.country,
+        city: data.city,
         referer,
+        createdAt: new Date(),
       },
     })
-    .catch(console.error)
+  }
 
   // Redirect to the original URL
   redirect(url.originalUrl)

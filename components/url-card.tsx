@@ -54,7 +54,7 @@ export function UrlCard({ url }: UrlCardProps) {
   }
 
   return (
-    <Card className='group hover:shadow-lg transition-all duration-200 border-0 bg-gradient-to-br from-white to-gray-50/50 dark:from-gray-900 dark:to-gray-800/50'>
+    <Card className='group hover:shadow-lg transition-all duration-200 border-0 bg-gradient-to-br from-white to-gray-50/50'>
       <CardHeader className='pb-3'>
         <div className='flex items-start justify-between'>
           <div className='flex-1 min-w-0'>

@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Logo } from '@/components/ui/logo'
@@ -174,4 +175,10 @@ export default function HomePage() {
       </footer>
     </div>
   )
+}
+
+export const metadata: Metadata = {
+  title: 'Linky - URL Shortener with Advanced Analytics | Free QR Code',
+  description:
+    'Shorten URLs for free with LinkShort. Advanced analytics, custom QR codes, and 99.9% uptime. Ideal for businesses and creators. Try it for free!',
 }
