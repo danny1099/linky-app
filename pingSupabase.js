@@ -1,8 +1,6 @@
 // pingSupabase.js
 import { createClient } from '@supabase/supabase-js';
-
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_KEY = process.env.SUPABASE_KEY;
+import { SUPABASE_URL, SUPABASE_KEY } from './config/env'
 
 if (!SUPABASE_URL || !SUPABASE_KEY) {
   console.error("❌ Missing Supabase credentials. Make sure SUPABASE_URL and SUPABASE_KEY are set.");
