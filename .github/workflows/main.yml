@@ -10,45 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      # Step 2: Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20' # Use Node.js 20 o higger
-
-      # Step 3: Install Supabase Client
-      - name: Install Supabase Client
-        run: npm install @supabase/supabase-js --force
-
-      # Step 4: Ping Supabase
+      # Step 1: Ping Supabase
       - name: Ping Supabase
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }} # Supabase project URL
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }} # Supabase service role key
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
-          node -e "
-          (async () => {
-            try {
-              // Import Supabase client
-              const { createClient } = require('@supabase/supabase-js');
-              const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+          echo "Pinging Supabase at $SUPABASE_URL"
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X GET "$SUPABASE_URL/rest/v1/" \
+            -H "apikey: $SUPABASE_KEY" \
+            -H "Authorization: Bearer $SUPABASE_KEY")
 
-              // Ping Supabase by querying a table (e.g., 'songs')
-              const { data, error } = await supabase.from('urls').select('*').limit(5);
-
-              // Handle errors
-              if (error) throw error;
-
-              // Log success
-              console.log('Ping successful:', data);
-            } catch (err) {
-              // Log and exit with error
-              console.error('Error pinging Supabase:', err.message);
-              process.exit(1);
-            }
-          })();
-          "
+          if [ "$response" -eq 200 ]; then
+            echo "✅ Ping successful!"
+          else
+            echo "❌ Ping failed with status $response"
+            exit 1
+          fi
