@@ -16,15 +16,6 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
-          echo "Pinging Supabase at $SUPABASE_URL"
-          response=$(curl -s -o /dev/null -w "%{http_code}" \
-            -X GET "$SUPABASE_URL/rest/v1/" \
-            -H "apikey: $SUPABASE_KEY" \
-            -H "Authorization: Bearer $SUPABASE_KEY")
-
-          if [ "$response" -eq 200 ]; then
-            echo "✅ Ping successful!"
-          else
-            echo "❌ Ping failed with status $response"
-            exit 1
-          fi
+          curl -X GET "$SUPABASE_URL/rest/v1/" \
+          -H "apikey: $SUPABASE_KEY" \
+          -H "Authorization: Bearer $SUPABASE_KEY"
