@@ -29,19 +29,10 @@ jobs:
           (async () => {
             try {
               // Debugging: Log environment variables (optional)
-              console.log('Supabase URL:', ${{env.SUPABASE_URL}});
-              console.log('Supabase Key:', ${{env.SUPABASE_KEY}});
+              console.log('Supabase URL:', $SUPABASE_URL);
+              console.log('Supabase Key:', $SUPABASE_KEY);
 
-              // Import Supabase client
-              const { createClient } = require('@supabase/supabase-js');
-              const supabase = createClient(${{env.SUPABASE_URL}}, ${{env.SUPABASE_KEY}});
-              const { data, error } = await supabase.from('urls').select('*').limit(5);
-
-              // Handle errors
-              if (error) throw error;
-
-              // Log success
-              console.log('Ping successful:', data);
+              
             } catch (err) {
               // Log and exit with error
               console.error('Error pinging Supabase:', err.message);
