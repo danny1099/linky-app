@@ -25,18 +25,5 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
-          node -e "
-          (async () => {
-            try {
-              // Debugging: Log environment variables (optional)
-              console.log('Supabase URL:', $SUPABASE_URL);
-              console.log('Supabase Key:', $SUPABASE_KEY);
-
-              
-            } catch (err) {
-              // Log and exit with error
-              console.error('Error pinging Supabase:', err.message);
-              process.exit(1);
-            }
-          })();
-          "
+          echo "La clave URL es: $SUPABASE_URL y API: $SUPABASE_KEY"
+          
