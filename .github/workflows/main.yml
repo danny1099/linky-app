@@ -25,6 +25,25 @@ jobs:
           SUPABASE_URL: ${{ vars.SUPABASE_URL }}
           SUPABASE_KEY: ${{ vars.SUPABASE_KEY }}
         run: |
-          echo "La clave URL es: $SUPABASE_URL"
-          echo "La clave KEY es: $SUPABASE_KEY"
+          node -e "
+          (async () => {
+            try {
+              const { createClient } = require('@supabase/supabase-js');
+              const supabase = createClient($SUPABASE_URL, $SUPABASE_KEY);
+
+              // Ping Supabase by querying a table (e.g., 'songs')
+              const { data, error } = await supabase.from('urls').select('*').limit(5);
+
+              // Handle errors
+              if (error) throw error;
+
+              // Log success
+              console.log('Ping successful:', data);
+            } catch (err) {
+              // Log and exit with error
+              console.error('Error pinging Supabase:', err.message);
+              process.exit(1);
+            }
+          })();
+          "
           
