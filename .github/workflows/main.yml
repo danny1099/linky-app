@@ -22,8 +22,8 @@ jobs:
 
       - name: Ping Supabase
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ vars.SUPABASE_KEY }}
         run: |
           echo "La clave URL es: $SUPABASE_URL y API: $SUPABASE_KEY"
           
