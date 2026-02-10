@@ -58,7 +58,7 @@ export function UrlCard({ url }: UrlCardProps) {
       <CardHeader className='pb-3'>
         <div className='flex items-start justify-between'>
           <div className='flex-1 min-w-0'>
-            <CardTitle className='text-lg truncate'>{url.title || 'Untitled'}</CardTitle>
+            <CardTitle className='text-md truncate'>{url.title || 'Untitled'}</CardTitle>
             <CardDescription className='mt-1 text-xs truncate'>
               {url.description || url.originalUrl}
             </CardDescription>
@@ -100,7 +100,7 @@ export function UrlCard({ url }: UrlCardProps) {
             <BarChart3 className='w-4 h-4' />
             {url._count.clicks} clicks
           </span>
-          <span>Created {format(url.createdAt, 'MMM d, yyyy')}</span>
+          <span className='text-xs'>Created {format(url.createdAt, 'MMM d, yyyy')}</span>
         </div>
 
         {/* Actions */}
