@@ -1,5 +1,5 @@
-import { getCurrentUser } from '@/lib/auth'
 import { redirect } from 'next/navigation'
+import { getCurrentUser } from '@/lib/auth'
 import { Header } from '@/components/header'
 
 export default async function Layout({ children }: Children) {

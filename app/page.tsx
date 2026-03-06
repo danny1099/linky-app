@@ -100,9 +100,9 @@ export default function HomePage() {
             Everything you need to manage URLs
           </h2>
           <p className='text-sm text-gray-600 max-w-3xl mx-auto'>
-            Linky It's the most elegant and powerful URL shortener on the market. With advanced
-            analytics, customizable QR codes, and enterprise-grade reliability, it's the perfect
-            tool for managing your links professionally.
+            Linky is the most elegant and powerful URL shortener on the market. With advanced
+            analytics, customizable QR codes, and enterprise-grade reliability, it&apos;s the
+            perfect tool for managing your links professionally.
           </p>
         </div>
 
