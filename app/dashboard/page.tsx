@@ -33,67 +33,90 @@ export default async function Dashboard() {
       value: totalUrls.toLocaleString(),
       icon: LinkIcon,
       color: 'text-blue-600',
+      gradient: 'from-blue-50 to-blue-100',
+      iconBg: 'bg-blue-100',
+      border: 'border-blue-200',
     },
     {
       title: 'Total Clicks',
       value: totalClicks.toLocaleString(),
       icon: MousePointer,
-      color: 'text-green-600',
+      color: 'text-emerald-600',
+      gradient: 'from-emerald-50 to-emerald-100',
+      iconBg: 'bg-emerald-100',
+      border: 'border-emerald-200',
     },
     {
       title: 'Active URLs',
       value: activeUrls.toLocaleString(),
       icon: TrendingUp,
       color: 'text-indigo-600',
+      gradient: 'from-indigo-50 to-indigo-100',
+      iconBg: 'bg-indigo-100',
+      border: 'border-indigo-200',
     },
     {
       title: 'Avg. CTR',
-      value: totalUrls > 0 ? `${Math.round(totalClicks / totalUrls)}` : '0',
+      value: totalUrls > 0 ? `${Math.round(totalClicks / totalUrls)}%` : '0%',
       icon: BarChart3,
       color: 'text-purple-600',
+      gradient: 'from-purple-50 to-purple-100',
+      iconBg: 'bg-purple-100',
+      border: 'border-purple-200',
     },
   ]
 
   return (
-    <main className='container  mx-auto p-4 md:px-8'>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8'>
+    <main className='container mx-auto p-4 md:px-8'>
+      {/* Stats Cards */}
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10'>
         {stats.map((stat, index) => (
-          <Card key={index} className='bg-white'>
-            <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-              <CardTitle className='text-sm font-medium text-gray-600'>{stat.title}</CardTitle>
-              <stat.icon className={`h-4 w-4 ${stat.color}`} />
+          <Card
+            key={index}
+            className={`relative overflow-hidden bg-gradient-to-br ${stat.gradient} ${stat.border} border hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300`}
+          >
+            <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-3'>
+              <CardTitle className='text-sm font-semibold text-gray-700'>{stat.title}</CardTitle>
+              <div className={`p-2 rounded-lg ${stat.iconBg}`}>
+                <stat.icon className={`h-5 w-5 ${stat.color}`} />
+              </div>
             </CardHeader>
             <CardContent>
-              <div className='text-2xl font-bold text-gray-900'>{stat.value}</div>
+              <div className='text-3xl font-bold text-gray-900 tracking-tight'>{stat.value}</div>
             </CardContent>
           </Card>
         ))}
       </div>
 
-      {/* URLs Grid */}
+      {/* URLs Section */}
       <div className='mb-6'>
-        <div className='flex items-center justify-between mb-4 rounded-lg py-2'>
-          <h2 className='text-lg font-semibold text-gray-900'>Your URLs</h2>
-          <Button asChild>
+        <div className='flex items-center justify-between mb-6 rounded-lg py-2'>
+          <div className='flex items-center gap-3'>
+            <div className='w-1 h-8 bg-blue-600 rounded-full' />
+            <h2 className='text-xl font-bold text-gray-900'>Your URLs</h2>
+          </div>
+          <Button asChild size='sm' className='shadow-sm hover:shadow-md transition-shadow'>
             <Link href='/dashboard/create'>
+              <Plus className='w-4 h-4 mr-2' />
               Create URL
-              <Plus className='w-4 h-4 ml-2' />
             </Link>
           </Button>
         </div>
 
         {urls.length === 0 ? (
-          <Card className='text-center py-12'>
-            <CardContent>
-              <QrCode className='w-12 h-12 text-gray-400 mx-auto mb-4' />
-              <CardTitle className='text-xl mb-2'>No URLs yet</CardTitle>
-              <CardDescription className='mb-6'>
-                Create your first shortened URL to get started
+          <Card className='text-center py-14 border-dashed border-2'>
+            <CardContent className='flex flex-col items-center'>
+              <div className='w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-5'>
+                <QrCode className='w-8 h-8 text-gray-400' />
+              </div>
+              <CardTitle className='text-xl mb-3'>No URLs yet</CardTitle>
+              <CardDescription className='mb-6 max-w-xs mx-auto'>
+                Create your first shortened URL to start tracking clicks and analytics
               </CardDescription>
               <Button asChild>
                 <Link href='/dashboard/create'>
-                  Create Your First URL
                   <Plus className='w-4 h-4 mr-2' />
+                  Create Your First URL
                 </Link>
               </Button>
             </CardContent>
